@@ -5,8 +5,8 @@
 //Задать массив
 int index = 0;
 
-int [] array = new int[20];
-while (index<19)
+int [] array = new int[10];
+while (index<10)
 {
     array[index] = new Random().Next(10,100);
     index++;
@@ -18,7 +18,7 @@ index = 0;
 
 //Распечатать массив
 
-while (index<19)
+while (index<10)
 {
     int val=array[index];
     Console.WriteLine(val);
@@ -31,7 +31,7 @@ Console.WriteLine("Массив без нарушения возрастания
 
 int currentElement=array[0];
 Console.WriteLine(currentElement);
-while (index <=9)
+while (index <10) 
 {
     if(array[index]>currentElement)
     {
@@ -47,7 +47,7 @@ Console.WriteLine("Массив без нарушения убывания");
 
 int currentElementDown=array[0];
 Console.WriteLine(currentElementDown);
-while (index <=9)
+while (index <10)
 {
     if(array[index]<currentElementDown)
     {
@@ -81,9 +81,8 @@ SrArifm(array);
 Console.WriteLine("больше ср арифм элементов A");
 index=0;
 
-int currentElementBigSrAr=array[0];
-Console.WriteLine(currentElementBigSrAr);
-while (index <=9)
+int currentElementBigSrAr=array[index];
+while (index <10)
 {
     if(array[index]>result)
     {
@@ -94,3 +93,16 @@ while (index <=9)
 }
 
 
+// Определение четных
+Console.WriteLine("Четные");
+index=0;
+
+while (index <10)
+{
+    if(array[index]%2==0)
+    {
+        Console. WriteLine(array[index]);
+        int currentElementEven=array[index];
+    } 
+    index++;
+}
