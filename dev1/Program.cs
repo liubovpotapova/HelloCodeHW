@@ -62,21 +62,20 @@ Console.WriteLine("Знакочередование");
 // Чтобы не нарушался порядок знакочередования
 // Не получилось решить=((((((((((( Временное решение оставлю
 index=0;
+int indexSr=index+1;
 int currentEl=array[index];
-int nextEl=array[index+1];
 Console.WriteLine(currentEl);
 
-while (index <= array.Length)
+while (indexSr < array.Length)
 {
-    if((currentEl>0 && nextEl<0) || (currentEl<0 && nextEl>0))
+    if((currentEl>0 & array[indexSr]<0) | (currentEl<0 & array[indexSr]>0))
     {
-        Console. WriteLine(nextEl);
-        currentEl=nextEl;
-        index++;
-    } 
-    else
-    {
+        currentEl=array[indexSr];
+        Console. WriteLine(array[indexSr]);
         index++;
     }
+    else
+    {
+        indexSr++;
+    }
 }
-nextEl=array[index+1];
